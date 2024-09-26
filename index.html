@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Organizer & Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>STUDYFLOW</h1>
+        <nav>
+            <button class="tab-button active" id="coursesTab">Course Tracker</button>
+            <button class="tab-button" id="habitsTab">Habit Tracker</button>
+            <button class="tab-button" id="quizzesTab">Quizzes</button>
+            <button class="tab-button" id="analyticsTab">Analytics</button>
+            <button class="tab-button" id="resourcesTab">Resources</button>
+            <button class="tab-button" id="diaryTab">Daily Blog</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Courses Section -->
+        <section id="coursesSection" class="tab-section active">
+            <h2>Add New Course</h2>
+            <form id="courseForm">
+                <input type="text" id="courseName" placeholder="Course Name" required>
+                <button type="submit">Add Course</button>
+            </form>
+            <div id="coursesList"></div>
+        </section>
+
+        <!-- Habits Section -->
+        <section id="habitsSection" class="tab-section">
+            <h2>Add New Habit</h2>
+            <form id="habitForm">
+                <input type="text" id="habitName" placeholder="Habit Name" required>
+                <button type="submit">Add Habit</button>
+            </form>
+            <div id="habitsList"></div>
+        </section>
+
+        <!-- Quizzes Section -->
+        <section id="quizzesSection" class="tab-section">
+            <h2>Add New Quiz</h2>
+            <form id="quizForm">
+                <input type="text" id="quizName" placeholder="Quiz Name" required>
+                <input type="number" id="quizScore" placeholder="Score" required>
+                <button type="submit">Add Quiz</button>
+            </form>
+            <div id="quizzesList"></div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analyticsSection" class="tab-section">
+            <h2>Analytics</h2>
+            <div id="analyticsContent">
+                <h3>Courses Analysis</h3>
+                <div id="coursesAnalysis">
+                    <p>No courses added yet.</p>
+                </div>
+                <h3>Habits Analysis</h3>
+                <div id="habitsAnalysis">
+                    <p>No habits added yet.</p>
+                </div>
+                <h3>Quizzes Analysis</h3>
+                <div id="quizzesAnalysis">
+                    <p>No quizzes added yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resourcesSection" class="tab-section">
+            <h2>Manage Resources</h2>
+            <form id="resourceTopicForm">
+                <input type="text" id="topicInput" placeholder="Enter topic" required>
+                <button type="submit">Add Topic</button>
+            </form>
+            <div id="resourcesContainer">
+                <h3>Resources for Selected Topic</h3>
+                <form id="resourceForm">
+                    <input type="file" id="resourceFile" accept=".pdf" multiple>
+                    <button type="submit">Upload PDF</button>
+                </form>
+                <div id="resourcesList"></div>
+            </div>
+        </section>
+
+        <!-- Daily Blog Section -->
+        <section id="diarySection" class="tab-section">
+            <h2>Daily Blog</h2>
+            <form id="blogForm">
+                <textarea class="blog" id="blogEntry" placeholder="Write your daily blog here..." rows="5" required></textarea>
+                <button type="submit">Save Blog</button>
+            </form>
+            <div id="blogList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

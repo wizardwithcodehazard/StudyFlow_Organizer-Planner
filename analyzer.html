@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="analyzer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PDF Analyzer</h1>
+    </header>
+    <main>
+        <section class="file-upload-section">
+            <h2>Upload PDF</h2>
+            <input type="file" id="fileInput" accept="application/pdf" aria-label="Upload PDF file">
+            <div id="pdfContainer" class="pdf-container"></div>
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">Loading...</div>
+        </section>
+
+        <!-- Flashcard Section -->
+        <section class="flashcard-container">
+            <h2>Flashcards</h2>
+            <div class="flashcard-inputs">
+                <textarea id="flashcardQuestion" placeholder="Enter your flashcard question" aria-label="Flashcard question"></textarea>
+                <textarea id="flashcardAnswer" placeholder="Enter your flashcard answer" aria-label="Flashcard answer"></textarea>
+            </div>
+            <button id="generateFlashcard">Add Flashcard</button>
+            <div id="flashcardList" class="flashcard-list"></div>
+        </section>
+        
+        <!-- Quiz Generation Section -->
+        <section class="quiz-container">
+            <h2>Generate Quiz</h2>
+            <button id="generateQuiz">Generate Quiz</button>
+        </section>
+        
+        <!-- Quiz Results Section -->
+        <section id="quizResults" class="quiz-results" style="display: none;">
+            <h2>Your Quiz</h2>
+            <div id="quizContent"></div>
+            <button id="submitQuiz">Submit Quiz</button>
+            <div id="quizGrade" style="display: none;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PDF Analyzer. All rights reserved.</p>
+    </footer>
+    <script src="analyzer.js"></script>
+</body>
+</html>
